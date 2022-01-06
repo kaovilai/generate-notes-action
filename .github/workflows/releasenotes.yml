@@ -36,9 +36,9 @@ jobs:
             https://api.github.com/repos/$(cat org-repo)/releases/generate-notes \
             -d "{\"previous_tag_name\":\"$(cat previous_tag_name)\",\"tag_name\":\"$(cat tag_name)\"}" > response;
       - name: Get response body
-        run: cat response | jq -r .body > body
-      - name: Unescape body string
-        run: s=$(cat body) && printf '%b\n' $s > release_notes.md
+        run: cat response | jq -r .body > release_notes.md
+      # - name: Unescape body string
+      #   run: s=$(cat body) && printf '%b\n' $s > release_notes.md
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
