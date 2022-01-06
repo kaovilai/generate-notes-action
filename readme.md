@@ -6,4 +6,4 @@ update previous_tag_name and tag_name parameters by updating values in the respe
 
 ## Setup
 Add your github username and personal access token to action secrets to `GIT_USER` and `GIT_PAT` respevtively 
-https://github.com/<your-username>/generate-notes-action/settings/secrets/actions
+https://github.com/your-username/generate-notes-action/settings/secrets/actions
