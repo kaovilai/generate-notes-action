@@ -29,7 +29,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-        curl -u kaovilai:${{ secrets.GITHUB_TOKEN }} \
+        curl \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           -X POST \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/$(cat org-repo)/releases/generate-notes \
