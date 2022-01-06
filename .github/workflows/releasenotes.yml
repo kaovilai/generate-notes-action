@@ -35,6 +35,8 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/$(cat org-repo)/releases/generate-notes \
             -d "{\"previous_tag_name\":\"$(cat previous_tag_name)\",\"tag_name\":\"$(cat tag_name)\"}" > response
+            cat response | jq .body > body
+            s=$(cat response) printf '%b\n' "$s"
       - name: Get response body
         run: cat response | jq .body > body
       - name: Unescape body string
