@@ -5,4 +5,4 @@ This repo contains a github action that will retrieve release notes for you usin
 update `previous_tag_name` and `tag_name` files with desired parameters
 
 ## Setup
-Add your github username and personal access token to [action secrets](settings/secrets/actions) to `GIT_USER` and `GIT_PAT` respevtively
+Add your github username and personal access token to action secrets named `GIT_USER` and `GIT_PAT` respevtively
