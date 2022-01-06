@@ -43,4 +43,4 @@ jobs:
       - name: Get response body
         run: cat response | jq .body > body
       - name: Unescape body string
-        run: s=$(cat response) printf '%b\n' "$s"
+        run: s=$(cat response) && printf '%b\n' "$s"
